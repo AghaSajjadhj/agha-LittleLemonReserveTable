@@ -1,0 +1,39 @@
+.div-container{
+background-color:lightgrey;
+margin-left: 23px;
+margin-right: 23px;
+}
+.form-container{
+   
+    border-radius: 20px;
+    width: fit-content;
+    height: fit-content;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: auto;
+}
+input {
+    width: 70%;
+    border-radius: 15px;
+    padding: 10px;
+   border-width: 4px;
+}
+select{
+    
+    width: 77%;
+    border-radius: 15px;
+    padding: 10px;
+    border-width: 4px;
+   
+}
+
+.btn1, .btn2 {
+    background-color: #f4ce14;
+    width: 71%;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-left: 10px;
+ 
+   }
