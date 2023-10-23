@@ -1,19 +1,22 @@
-import React from 'react';
-import './App.css';
-// import Navbar from './components/nabar/Navbar';
-import Main from './components/main/Main';
-import Footer from './components/footer/Footer';
+import React from "react";
+ 
+import Main from "./components/main/Main";
+import Form from "./components/form/Form";
+
+
 
 
 function App() {
   return (
-     <>
+    <>
+    <Main /> 
+    <Form/>
     
-    <Main />
-    <Footer />
-    </>
-   
-      );
+
+ 
+  
+   </>   
+  );
 }
 
 export default App;
