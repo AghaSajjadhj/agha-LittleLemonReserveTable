@@ -58,7 +58,7 @@ function Main() {
             served with a modern twist.
           </p>
           <br />
-        
+          <button className='btn1' >Reserve a table</button> <br/><br/>
          
         </Col>
 
