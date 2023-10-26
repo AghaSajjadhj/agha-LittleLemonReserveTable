@@ -1,53 +1,60 @@
 import React from 'react'
 import "./form.css";
+import { useState } from 'react';
 
 function Form() {
 const [date, setDate] = useState();
 const [time, setTime] = useState();
-const [num, setNum] = useState();
-const [occation, setOccation] = useState();
+const [number, setNum] = useState("0");
+const [selectOccasion, setSelectOccasion] = useState();
+
+const handleSubmit = (e) => {
+  console.log(e.target[0].value);
+  console.log(e.target[1].value);
+  console.log(e.target[2].value);
+  console.log(e.target[3].value);
+e.preventDefault();
+
+}
 
   return (
     <>
    
     <div className='div-container'>
-      <form className='form-container'>
-      <button className='btn1' >Reserve a table</button> <br/><br/>
-
-   
-  <label htmlFor=''>Select Date:</label> &nbsp;
-    <input type='date' name='date' value={date}/> <br/><br/>
+      <form className='form-container' onSubmit={handleSubmit}>
+      
+<label htmlFor=''>Select Date:</label> &nbsp;
+    <input type='date' 
+   value={date} onChange={(e) => setDate(e.target.value)}  /> <br/><br/>
+ 
 
 <label htmlFor=''>Select Time:</label> &nbsp;
-<input type='time' name='time' value={time}/> <br/><br/>
-
+<input type='time' min="12:00 pm" max="2:00 am" value={time} onChange={(e) => setTime(e.target.value)} /> <br/><br/>
+  
+ 
 <label htmlFor=''> Number of Guests:</label>
-<input type='number' name='number' value={num}/><br/><br/>
+<input type='number' min="2" max="10" value={number} onChange={(e) => setNum(e.target.value)}/><br/><br/> 
 
 
 <label htmlFor=''> Occasion:</label><br/>
 
-<select value={occation}>
-<option>
-Select an Option
-</option>
-<option>
+<select value={selectOccasion} onChange={(e) => setSelectOccasion(e.target.value)}>
+
+<option value="Anniversary">
 Anniversary
 </option>
-<option>
+<option value="Birthday">
 Birthday
 </option>
-<option>
-Surprise Party
-</option>
-<option>
+
+<option value="Others">
 Others
 </option>
 </select>
+ 
 
-
-<label htmlFor='' type="text"/> <br/><br/>
-<button className='btn2'>Submit</button>
+ <br/><br/>
+<input type='submit' className='btn2' value='Submit' />
    </form>
    
     </div>

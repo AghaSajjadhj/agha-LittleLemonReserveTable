@@ -1,0 +1,25 @@
+.row-one{
+    background-color:#495e57;
+    height: 100%;
+    margin-bottom: 1px;
+}
+.logo{
+    
+    margin:auto ;
+    padding: 0;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    margin: auto;
+    padding-top:25px ;
+   }
+
+ul li{
+    color: #495e57;
+    font-weight: bold;
+    padding: 10px;
+    
+}
+
