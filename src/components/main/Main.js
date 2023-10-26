@@ -5,7 +5,7 @@ import {Route,Routes, useNavigate } from "react-router-dom";
 import { Form } from "formik";
 
 function Main() {
-
+const nevigate = useNavigate();
   return (
     <Container className="main-container">
       
@@ -27,7 +27,7 @@ function Main() {
           <Routes>
             <Route path="/form/Form" element={<Form/>}/>
           </Routes>
-          <button className='btn1' >Reserve a table</button> 
+          <button className='btn1' onClick={()=> nevigate('/form')}>Reserve a table</button> 
         
           <br/><br/>
         </Col>

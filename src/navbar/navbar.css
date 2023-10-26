@@ -1,5 +1,5 @@
 .row-one{
-    background-color:#495e57;
+    background-color:#bdc3c1;
     height: 100%;
     margin-bottom: 1px;
 }
@@ -18,8 +18,11 @@ ul{
 
 ul li{
     color: #495e57;
-    font-weight: bold;
+   font-size: 20px;
     padding: 10px;
     
 }
-
+ul li a.active{
+    font-weight: bold;
+    font-size: 23px;
+}

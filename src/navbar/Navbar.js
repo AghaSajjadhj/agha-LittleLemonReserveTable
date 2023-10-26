@@ -1,7 +1,7 @@
 import React from "react";
 import "./navbar.css";
 import { Container, Row, Col } from "react-grid-system";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 function Navbar() {
   return (
@@ -19,26 +19,26 @@ function Navbar() {
 <Col>
   <ul>
     <li>
-      <Link to="/main">Home</Link>
+      <NavLink to="/main">Home</NavLink>
     </li>
     <li>
-      <Link to="/about">About</Link>
+      <NavLink to="/about">About</NavLink>
     </li>
     <li>
-      <Link to>Menu</Link>
+      <NavLink to="menu">Menu</NavLink>
     </li>
     <li>
-      <Link to="/form">Reservation</Link>
+      <NavLink to="/form">Reservation</NavLink>
     </li>
     <li>
-      <Link to>Order Online</Link>
+      <NavLink to="">Order Online</NavLink>
     </li>
 
     <li>
-      <Link to>Contact</Link>
+      <NavLink to="">Contact</NavLink>
     </li>
     <li>
-      <Link to>Login</Link>
+      <NavLink to="">Login</NavLink>
     </li>
   </ul>
 </Col>
