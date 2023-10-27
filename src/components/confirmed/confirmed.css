@@ -1,0 +1,19 @@
+.confirmed-booking {
+    display: flex;
+    flex-direction: column;
+   
+    min-height: 31.25rem;
+    padding: 1.875rem 0 1.875rem 0;
+    text-align: center;
+  }
+  
+
+.confirmed-booking h2 {
+    padding: 1.875rem 0 1.875rem 0;
+    background-color: #495E57;
+    color: #FFFFFF;
+   
+  }
+  
+  
+  

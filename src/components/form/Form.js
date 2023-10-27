@@ -1,6 +1,8 @@
 import React from 'react'
 import "./form.css";
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 function Form() {
 const [date, setDate] = useState();
@@ -16,6 +18,8 @@ const handleSubmit = (e) => {
 e.preventDefault();
 
 }
+
+const nevigate = useNavigate();
 
   return (
     <>
@@ -54,13 +58,13 @@ Others
  
 
  <br/><br/>
-<input type='submit' className='btn2' value='Submit' />
+<input type='submit' className='btn2' value='Submit' onClick={()=> nevigate('/confirmed')}  />
    </form>
    
-    </div>
-
+    </div>  
+    
     </>
-
+    
   )
 }
 

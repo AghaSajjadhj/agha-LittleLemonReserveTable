@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import Navbar from './navbar/Navbar';
-import Main from './components/main/Main';
+// import Navbar from './navbar/Navbar';
+// import Main from './components/main/Main';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,9 +14,9 @@ root.render(
   
   
   <BrowserRouter>
-  <Navbar/>
+  
     
-  <Main/>
+  
     <App/>
    
   </BrowserRouter>

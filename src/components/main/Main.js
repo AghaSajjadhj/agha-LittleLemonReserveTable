@@ -27,7 +27,7 @@ const nevigate = useNavigate();
           <Routes>
             <Route path="/form/Form" element={<Form/>}/>
           </Routes>
-          <button className='btn1' onClick={()=> nevigate('/form')}>Reserve a table</button> 
+          <button className='btn1' onClick={()=> nevigate('/form') }>Reserve a table</button> 
         
           <br/><br/>
         </Col>
