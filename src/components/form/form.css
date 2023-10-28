@@ -1,7 +1,8 @@
 .div-container{
-background-color:lightgrey;
+    background-color:#bdc3c1;
 margin-left: 23px;
 margin-right: 23px;
+margin-bottom: 1px;
 }
 .form-container{
    
@@ -37,3 +38,4 @@ select{
    
  
    }
+   

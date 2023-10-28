@@ -5,12 +5,16 @@ import Navbar from "./navbar/Navbar";
 import Form from "./components/form/Form";
 import About from "./pages/About";
 import Confirmed from "./components/confirmed/Confirmed";
+import Bottom from "./components/bottom/Bottom";
+
+
 
 
 function App() {
   return (
     <>
   <Navbar/>
+  <Main/>
 
   
     <Routes>
@@ -21,8 +25,9 @@ function App() {
    <Route path="/confirmed" element={<Confirmed/>}/>
 
     </Routes>
-    
-    
+ 
+    <Bottom/>
+ 
 
  
   
