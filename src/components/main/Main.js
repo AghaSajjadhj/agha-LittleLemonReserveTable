@@ -2,7 +2,8 @@ import React from "react";
 import "./main.css";
 import { Container, Row, Col } from "react-grid-system";
 import {Route,Routes, useNavigate } from "react-router-dom";
-import { Form } from "formik";
+import Form from "../form/Form";
+
 
 function Main() {
 const nevigate = useNavigate();

@@ -5,10 +5,10 @@ import { useNavigate } from 'react-router-dom';
 
 
 function Form() {
-const [date, setDate] = useState();
-const [time, setTime] = useState();
+const [date, setDate] = useState("");
+const [time, setTime] = useState("");
 const [number, setNum] = useState("0");
-const [selectOccasion, setSelectOccasion] = useState();
+const [selectOccasion, setSelectOccasion] = useState("");
 
 const handleSubmit = (e) => {
   console.log(e.target[0].value);
@@ -16,7 +16,6 @@ const handleSubmit = (e) => {
   console.log(e.target[2].value);
   console.log(e.target[3].value);
 e.preventDefault();
-
 }
 
 const nevigate = useNavigate();
@@ -29,20 +28,20 @@ const nevigate = useNavigate();
       
 <label htmlFor=''>Select Date:</label> &nbsp;
     <input type='date' 
-   value={date} onChange={(e) => setDate(e.target.value)}  /> <br/><br/>
+   value={date} onChange={(e) => setDate(e.target.value)} required /> <br/><br/>
  
 
 <label htmlFor=''>Select Time:</label> &nbsp;
-<input type='time' min="12:00 pm" max="2:00 am" value={time} onChange={(e) => setTime(e.target.value)} /> <br/><br/>
+<input type='time' min="12:00 pm" max="2:00 am" value={time} onChange={(e) => setTime(e.target.value)} required/> <br/><br/>
   
  
 <label htmlFor=''> Number of Guests:</label>
-<input type='number' min="2" max="10" value={number} onChange={(e) => setNum(e.target.value)}/><br/><br/> 
+<input type='number' min="2" max="10" value={number} onChange={(e) => setNum(e.target.value)} required/><br/><br/> 
 
 
 <label htmlFor=''> Occasion:</label><br/>
 
-<select value={selectOccasion} onChange={(e) => setSelectOccasion(e.target.value)}>
+<select value={selectOccasion} onChange={(e) => setSelectOccasion(e.target.value)} required>
 
 <option value="Anniversary">
 Anniversary

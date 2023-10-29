@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "./navbar/Navbar";
  import Main from "./components/main/Main";
 import Form from "./components/form/Form";
-import About from "./pages/About";
+import About from "./components/about/About";
 import Confirmed from "./components/confirmed/Confirmed";
 import Bottom from "./components/bottom/Bottom";
 
@@ -14,14 +14,14 @@ function App() {
   return (
     <>
   <Navbar/>
-  <Main/>
+  {/* <Main/> */}
 
   
     <Routes>
-   
+    <Route path="/" element={<main/>}/>
    <Route path="/about" element={<About/>}/>
    <Route path="/form" element={<Form/>}/>
-   <Route path="/home" element={<Main/>}/>
+   <Route path="/home" element={<Main/>} />
    <Route path="/confirmed" element={<Confirmed/>}/>
 
     </Routes>

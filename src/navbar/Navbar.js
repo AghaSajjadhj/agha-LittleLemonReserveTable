@@ -25,17 +25,17 @@ function Navbar() {
       <NavLink to="/about">About</NavLink>
     </li>
     <li>
-      <NavLink to="menu">Menu</NavLink>
+      <NavLink to="/menu">Menu</NavLink>
     </li>
     <li>
       <NavLink to="/form">Reservation</NavLink>
     </li>
     <li>
-      <NavLink to="">Order Online</NavLink>
+      <NavLink to="/order">Order Online</NavLink>
     </li>
 
     <li>
-      <NavLink to="">Contact</NavLink>
+      <NavLink to="/contact">Contact</NavLink>
     </li>
     <li>
       <NavLink to="">Login</NavLink>

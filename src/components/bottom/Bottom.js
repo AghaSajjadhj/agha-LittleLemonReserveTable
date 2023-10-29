@@ -7,51 +7,43 @@ function Bottom() {
     
     <Container className='container'> 
     <Row>
-    <Col sm={2}>
+    <Col sm={3}>
         <img  src="images\small_logo.png" alt="" />
     </Col>
-    <Col sm={8}>
     
-             
-                
-              
-                      <h3>Document Navigation</h3>
-                  <ul>
-                      <li>Home</li>
-                      <li>About</li>
-                      <li>Menu</li>
-                      <li>Reservations</li>
-                      <li>Order Online</li>
-                      <li>Login</li>
-                  </ul>
-                 <br />
+    <Col sm={3}>
+      <h3>Sitemap</h3>
                   
-                      <h3>Contact</h3>
-                  <ul>
-                      <li>Address</li>
-                      <li>Phone Number</li>
-                      <li>Email</li>
-                  </ul>
-              
-                 
-                      <h3>Social Media Links</h3>
-                  <ul>
-                      <li>Address</li>
-                      <li>Phone Number</li>
-                      <li>Email</li>
-                  </ul>
-               
-                
-              
-    </Col>
-        <Col sm={2}>
+                      Home <br />
+                      About <br />
+                      Menu <br />
+                      Reservations <br />
+                      Order Online <br />
+                      Contact <br />
+                      Login <br />
+          
+            </Col>
+
+            <Col sm={3}>
+      <h3>Contact Us</h3>
+      678 Pisa Ave, Chicago, IL 60611<br />
+      (300) 3789027 <br />
+      customer@littlelemon.com
+                     
+              </Col>
+              <Col sm={3}>
        
-        <img className='social-img' src="images\fb.png" alt="" />
-        <img className='social-img' src="images\twitter.png" alt="" />
-        <img className='social-img' src="images\instagram.png" alt="" />
-        <img className='social-img' src="images\youtube.png" alt="" />
-        </Col>
+       <img className='social-img' src="images\fb.png" alt="" />
+       <img className='social-img' src="images\twitter.png" alt="" />
+       <img className='social-img' src="images\instagram.png" alt="" />
+       <img className='social-img' src="images\youtube.png" alt="" />
+       </Col>
     </Row>
+
+
+    
+  
+    
    </Container>
       
     
