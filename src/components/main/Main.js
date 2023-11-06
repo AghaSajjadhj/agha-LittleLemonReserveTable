@@ -1,15 +1,13 @@
 import React from "react";
 import "./main.css";
 import { Container, Row, Col } from "react-grid-system";
-import {Route,Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Form from "../form/Form";
 
-
 function Main() {
-const nevigate = useNavigate();
+  const nevigate = useNavigate();
   return (
     <Container className="main-container">
-      
       {/*This is a Row Two */}
       <Row className="row-two">
         <Col lg={6}>
@@ -26,18 +24,21 @@ const nevigate = useNavigate();
           </p>
           <br />
           <Routes>
-            <Route path="/form/Form" element={<Form/>}/>
+            <Route path="/form/Form" element={<Form />} />
           </Routes>
-          <button className='btn1' onClick={()=> nevigate('/form') }>Reserve a table</button> 
-        
-          <br/><br/>
+          <button className="btn1" onClick={() => nevigate("/form")}>
+            Reserve a table
+          </button>
+
+          <br />
+          <br />
         </Col>
 
         <Col lg={6}>
-          <img src="images\dish.jpg" alt="dishimage"/>
+          <img src="images\dish.jpg" alt="dishimage" />
         </Col>
       </Row>
-    </Container> 
+    </Container>
   );
 }
 
