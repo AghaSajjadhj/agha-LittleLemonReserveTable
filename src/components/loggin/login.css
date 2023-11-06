@@ -1,0 +1,39 @@
+.wel{
+ 
+   padding-left: 70px;
+    color: white;
+    padding-top: 20px;
+}
+.login-container{
+
+    background-color: #495e57;
+    margin-top: 10px;
+   margin-left: 20px;
+   margin-right: 20px;
+   
+}
+.login_form{
+    border-radius: 20px;
+    width: 25%;
+   
+    padding-bottom: 20px;
+    margin: auto;
+}
+
+
+
+.login, .pass{
+    display: block;
+    text-align: center;
+  
+   
+   }
+
+   .btn_sub{
+    background-color: #f4ce14;
+    width: 70%;
+    height: 45px;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-left: 14px;
+   }

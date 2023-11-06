@@ -1,71 +1,92 @@
-import React from 'react'
-import "./form.css";
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { ErrorMessage, Formik, Form, Field } from "formik";
+import * as Yup from "yup";
+import RedErrorMessage from "./RedErrorMessage";
+import './form.css';
+import { useNavigate } from 'react-router-dom' ;
 
-
-function Form() {
-const [date, setDate] = useState("");
-const [time, setTime] = useState("");
-const [number, setNum] = useState("0");
-const [selectOccasion, setSelectOccasion] = useState("");
-
-const handleSubmit = (e) => {
-  console.log(e.target[0].value);
-  console.log(e.target[1].value);
-  console.log(e.target[2].value);
-  console.log(e.target[3].value);
-e.preventDefault();
-}
-
-const nevigate = useNavigate();
-
-  return (
-    <>
-   
-    <div className='div-container'>
-      <form className='form-container' onSubmit={handleSubmit}>
-      
-<label htmlFor=''>Select Date:</label> &nbsp;
-    <input type='date' 
-   value={date} onChange={(e) => setDate(e.target.value)} required /> <br/><br/>
- 
-
-<label htmlFor=''>Select Time:</label> &nbsp;
-<input type='time' min="12:00 pm" max="2:00 am" value={time} onChange={(e) => setTime(e.target.value)} required/> <br/><br/>
+function FormikForm2() {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({});
+  const newValidations = Yup.object({
   
- 
-<label htmlFor=''> Number of Guests:</label>
-<input type='number' min="2" max="10" value={number} onChange={(e) => setNum(e.target.value)} required/><br/><br/> 
+    date: Yup.date().required("Please select the date"),
+    time: Yup.string().required("Please select the time"),
+    number: Yup.number().min(1).required("Please fill with number of guests"),
+    selectOccasion: Yup.string().required("Please select the occasion"),
+   
+  });
+  return (
+    <div className="reserve_container">
+      <Formik
+        validationSchema={newValidations}
+        initialValues={{
+          date: "",
+          time: "",
+          number: "",
+          selectOccasion: "",
+          
+        }}
+        onSubmit={(values) => {
+          console.log(values);
+          setFormData(values);
+          navigate("/submitdata");
+        }}
+      >
+       <Form className='reserve_form'>
+       <h2 className="head_reserve">Reserve a table</h2>
+<label  htmlFor=''>Select Date:</label> &nbsp;
+    <Field type='date' name="date"/> 
+     <RedErrorMessage name="date" /> <br/>
 
+      <label htmlFor=''>Select Time:</label> &nbsp;
+<Field type='time' name="time"/> 
+<RedErrorMessage name="time" /><br/>
+  
+  <label htmlFor=''> Number of Guests:</label>
+<Field type='number' name="number"/>
+ <RedErrorMessage name="number" /> <br/>
 
-<label htmlFor=''> Occasion:</label><br/>
-
-<select value={selectOccasion} onChange={(e) => setSelectOccasion(e.target.value)} required>
-
-<option value="Anniversary">
+  
+  <label htmlFor=''> Select an Occasion:</label>
+<Field name="selectOccasion" as="select">
+<option value="">
+Select
+</option>
+<option value="anniversary">
 Anniversary
 </option>
-<option value="Birthday">
+<option value="birthday">
 Birthday
 </option>
 
-<option value="Others">
+<option value="others">
 Others
 </option>
-</select>
- 
+</Field>
+<RedErrorMessage name="selectOccasion" /> 
+ <br/>
+ <button className="btn2" type="submit">Make a Reservation</button>
+   </Form>
+      </Formik>
 
- <br/><br/>
-<input type='submit' className='btn2' value='Submit' onClick={()=> nevigate('/confirmed')}  />
-   </form>
-   
-    </div>  
-   
     
-    </>
-    
-  )
+     {/* <div className="reserved_data">
+      <h2 className=".head_reserved">Congratulation You have reserved your table</h2>
+      <label htmlFor="">Selected Date:</label> &nbsp; &nbsp;
+      {formData.date} <br />
+      <label htmlFor="">Selected Time:</label> &nbsp; &nbsp;
+      {formData.time} <br />
+      <label htmlFor="">Selected Number:</label> &nbsp; &nbsp;
+      {formData.number} <br />
+      <label htmlFor="">Selected Occasion:</label> &nbsp; &nbsp;
+      {formData.selectOccasion}
+      
+      </div> */}
+     
+    </div>
+  
+  );
 }
 
-export default Form;
+export default FormikForm2;

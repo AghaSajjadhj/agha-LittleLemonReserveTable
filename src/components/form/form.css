@@ -1,10 +1,11 @@
-.div-container{
-    background-color:#bdc3c1;
+.reserve_container{
+    background-color: #495e57;
+margin-top: 10px;
 margin-left: 23px;
 margin-right: 23px;
 margin-bottom: 1px;
 }
-.form-container{
+.reserve_form{
    
     border-radius: 20px;
     width: fit-content;
@@ -22,7 +23,7 @@ input {
 }
 select{
     
-    width: 81%;
+    width: 78%;
     border-radius: 15px;
     padding: 10px;
     border-width: 4px;
@@ -31,11 +32,28 @@ select{
 
  .btn2 {
     background-color: #f4ce14;
-    width: 81%;
+    width: 70%;
+    margin-left: 12px;
     height: 50px;
     border-radius: 20px;
     font-size: 20px;
-   
- 
    }
-   
+
+   .reserve_container label {
+    color: white;
+   }
+
+ .head_reserve{
+    color: white;
+    padding-left: 15%
+    ;
+ }
+ /* .reserved_logindata{
+    display: block;
+    text-align:center;
+ }
+ .head_reserved{
+    color: white;
+    padding-left: 15%
+    ;
+ } */
